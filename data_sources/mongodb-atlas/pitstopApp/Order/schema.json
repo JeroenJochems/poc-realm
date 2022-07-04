@@ -1,0 +1,42 @@
+{
+    "bsonType": "object",
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "accepted": {
+            "bsonType": "date"
+        },
+        "acceptedByPos": {
+            "bsonType": "string"
+        },
+        "createdAt": {
+            "bsonType": "date"
+        },
+        "description": {
+            "bsonType": "string"
+        },
+        "ownerId": {
+            "bsonType": "string"
+        },
+        "pickedUp": {
+            "bsonType": "date"
+        },
+        "pickedUpAt": {
+            "bsonType": "date"
+        },
+        "ready": {
+            "bsonType": "date"
+        },
+        "readyAt": {
+            "bsonType": "string"
+        }
+    },
+    "required": [
+        "_id",
+        "description",
+        "createdAt",
+        "ownerId"
+    ],
+    "title": "Order"
+}

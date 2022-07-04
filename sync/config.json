@@ -1,0 +1,39 @@
+{
+    "type": "flexible",
+    "state": "enabled",
+    "development_mode_enabled": true,
+    "service_name": "mongodb-atlas",
+    "database_name": "pitstopApp",
+    "client_max_offline_days": 30,
+    "is_recovery_mode_disabled": false,
+    "permissions": {
+        "rules": {},
+        "defaultRoles": [
+            {
+                "name": "admin",
+                "applyWhen": {
+                    "%%user.id": {
+                        "$in": [
+                            "62babea7438539ea5748d4b5"
+                        ]
+                    }
+                },
+                "read": true,
+                "write": true
+            },
+            {
+                "name": "user",
+                "applyWhen": {},
+                "read": {
+                    "ownerId": "%%user.id"
+                },
+                "write": {
+                    "ownerId": "%%user.id"
+                }
+            }
+        ]
+    },
+    "queryable_fields_names": [
+        "ownerId"
+    ]
+}
